@@ -1,0 +1,37 @@
+# 7 +/- 2 things you can hold mentally
+# Delegation while coding
+# Parallels to OOP, coupling
+# Process:
+  - Recreate
+  - Collect info
+  - Isolating problem
+
+
+
+## Collect info
+# ----------------------
+# Scrolling output of a file as it changes
+$ tail -f log/staging.log
+
+# bisect / blame
+# Do this in your ~/.gitconfig file
+[alias]
+    credit = blame
+
+git log -S "class Product"
+
+Isolate problem
+# ----------------------
+# pry stuff (put pry in nude glossary)
+> ls (what is available in this scope)
+> whereami (shows context like at begining of pry session)
+> require 'set'; Set.new(1) (this raises an exception)
+> wtf; wtf?; wtf?!?!; (stacktrace of most recent exception)
+> cat --ex; cat --ex 0; cat --ex 1 (show code at each point in stack trace)
+
+bundle open searchkick
+gem pristine searchkick
+
+Links:
+https://github.com/pry/pry/wiki/Exceptions
+http://guides.rubygems.org/command-reference/

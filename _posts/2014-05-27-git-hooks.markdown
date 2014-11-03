@@ -1,0 +1,146 @@
+---
+title: Git Hooks
+tagline: 
+layout: post
+categories: git
+---
+
+<br>
+### **Q:** What are they?
+### **A:** Git hooks let you fire off custom scripts during your normal git workflow.
+
+There are two kinds: client side and server side.
+
+***Client side examples:***
+
+* do something before/after you commit
+* do something before/after you push
+
+***Server side examples:***
+
+* can run before/after deployments
+* can reject pushes as well as output error messages back to client based on parameters you specify
+
+In this post, I'm going to focus on the client side hooks.
+
+<br>
+
+---
+
+<br>
+
+<br>
+### **Q:** Where are they?
+### **A:** You can see some samples in `.git/hooks` in any git repository.
+
+*Tip: There are a bunch of sample files in there already with lots of useful hooks.*
+
+*To use one of them, rename the .sample file so that it has no extention*
+
+<br>
+
+---
+
+<br>
+
+### **Q:** What can you do with them?
+
+### **A:** Search source code for debugger, binding.pry, console.logs
+
+Have you ever commited a binding.pry to staging by accident? Wouldn't it be nice to grep for strings like 'binding.pry' or 'debugger' before each commit? Just use the pre-commit git hook:
+
+`.git/hooks/pre-commit`
+
+```sh
+#!/bin/sh
+
+if git-rev-parse --verify HEAD >/dev/null 2>&1; then
+    against=HEAD
+else
+    against=4b825dc642cb6eb9a060e54bf8d69288fbee4904
+fi
+
+for FILE in `git diff-index --check --name-status $against -- | cut -c3-` ; do
+  # Check if the file contains 'debugger'
+  if [ "grep 'debugger' $FILE" ]
+  then
+    echo $FILE ' contains debugger!'
+    exit 1
+  fi
+done
+exit
+```
+
+<br>
+### **A:** Auto deploy on git push
+
+`.git/hooks/post-receive`
+
+```sh
+#!/bin/sh
+#
+## store the arguments given to the script
+read oldrev newrev refname
+
+## Where to store the log information about the updates
+LOGFILE=./post-receive.log
+
+# The deployed directory (the running site)
+DEPLOYDIR=/var/www/html/simpleapp
+
+##  Record the fact that the push has been received
+echo -e "Received Push Request at $( date +%F )" >> $LOGFILE
+echo " - Old SHA: $oldrev New SHA: $newrev Branch Name: $refname" >> $LOGFILE
+
+## Update the deployed copy
+echo "Starting Deploy" >> $LOGFILE
+
+echo " - Starting code update"
+GIT_WORK_TREE="$DEPLOYDIR" git checkout -f
+echo " - Finished code update"
+
+echo " - Starting composer update"
+cd "$DEPLOYDIR"; composer update; cd -
+echo " - Finished composer update"
+
+echo "Finished Deploy" >> $LOGFILE
+```
+
+<br>
+### **A:** Run the test suite on commit; if it fails, reject commit
+
+`.git/hooks/blah`
+
+```sh
+#!/bin/bash
+
+# Stash unstaged changes before running tests
+git stash -q --keep-index
+
+# Run tests
+RUN_TESTS_CMD='rspec spec/no_rails'
+NUM_FAILS=`${RUN_TESTS_CMD} --format=progress | grep "example"| grep "fail"| awk {'print $3'}`
+
+# Unstash
+git stash pop -q
+
+if [ $NUM_FAILS -ne 0 ]
+then
+  echo -e "Can't commit! You've broken $NUM_FAILS tests!!!"
+  exit 1
+else
+  echo -e "All tests passed. You didn't break anything. Congrats!\n"
+  exit 0
+fi
+```
+
+<br>
+
+---
+
+<br>
+
+Check the samples in your `.git/hooks` directory for more ideas!
+
+[More about customizing git hooks.](http://git-scm.com/book/en/Customizing-Git-Git-Hooks)
+

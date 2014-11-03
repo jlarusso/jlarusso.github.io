@@ -1,0 +1,8 @@
+# Show available wireless networks
+airport -s
+
+# Find a file
+locate [filename]
+
+# Show open TCP and UDP ports
+lsof -i

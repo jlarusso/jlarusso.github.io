@@ -1,0 +1,21 @@
+# Putting & at the end of a command runs it in the background
+$ brew update &
+
+# use 'df' to get info on disks + file system
+$ df
+
+# use 'du' to get disk usage info
+$ du | sort -n -r | head
+
+# gnu regular expression parser
+grep
+
+# simple substitution
+sed
+
+awk
+
+send escape b to advance word
+escape f forward word
+ctrl a start of line
+ctrl e end of line

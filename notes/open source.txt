@@ -1,0 +1,4 @@
+can search git for stuff to fix tagged with beginner or whatever
+bundler, pry, rvm, homebrew
+
+https://github.com/trending?l=ruby
