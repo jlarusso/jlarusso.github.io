@@ -1,0 +1,35 @@
+.row {
+  width: 100%;
+  @extend %clearfix;
+}
+
+.col-4 {
+  float: left;
+  width: 33.3333%;
+}
+
+.col-6 {
+  float: left;
+  width: 50%;
+}
+
+.col-8 {
+  float: left;
+  width: 66.6666%;
+}
+
+.col-12 {
+  width: 100%;
+}
+
+.gutter {
+  padding: 10px 10px 0 10px;
+}
+
+.project.card {
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+.projects {
+}
