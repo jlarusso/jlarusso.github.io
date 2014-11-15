@@ -27,9 +27,30 @@
 }
 
 .project.card {
+  position: relative;
   padding: 10px;
   margin-bottom: 20px;
 }
 
 .projects {
+}
+
+.tag-list {
+  margin: 0;
+
+  li {
+    list-style: none;
+    background: rgba(230, 230, 230, 1);
+    background: url("/images/patterns/stripe.png");
+    display: inline-block;
+    margin: 1px;
+    padding: 0 2px;
+  }
+}
+
+.divider {
+  width: 100%;
+  height: 6px;
+  background: url("/images/patterns/zag.png");
+  margin: 10px 0;
 }
