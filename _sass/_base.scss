@@ -97,8 +97,14 @@ a {
 
     &:hover {
         color: $text-color;
-        text-decoration: underline;
+        // text-decoration: underline;
     }
+}
+
+a {
+  h1, h2, h3, h4, h5 {
+    display: inline;
+  }
 }
 
 
