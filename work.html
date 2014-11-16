@@ -7,34 +7,77 @@ permalink: /work/
 <section class="projects">
 
   <!-- Project -->
+  <div class="divider"></div>
   <div class="project card row">
     <div class="col-12">
-        <h3>Nude Skincare</h3>
+      <a href="http://www.thehighline.org/">
+        <h3>The High Line</h3>
       </a>
+      <p><span>Launched:</span> September 2014</p>
+      <p><span>Role:</span> Lead Engineer</p>
     </div>
-    <div class="col-12">
+    <div class="col-6">
       <div class="gutter">
-        <p><span>Role:</span> Lead engineer</p>
+        <a href="http://www.thehighline.org/">
+          <img src="/images/work/highline_md.png">
+        </a>
       </div>
     </div>
-    <div class="col-12">
+    <div class="col-6">
       <div class="gutter">
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <ul>
-          <li>Search via Elastic Search</li>
-          <li>Client-facing CMS</li>
+        <h4>Description:</h4>
+        <p>This is what its all about</p>
+      </div>
+      <div class="gutter">
+        <h4>Implemented:</h4>
+        <ul class="tag-list">
+          <li>CI via <a href="https://www.engineyard.com/">EngineYard</a> &amp; <a href="https://circleci.com/">CircleCI</a></li>
+          <li>Rspec + Cucumber test suite</li>
+          <li>Custom SQL queries using <a href="https://github.com/rails/arel">Arel tables</a></li>
+          <li>Payment system</li>
+          <li>Shopping cart</li>
+          <li>Recurring event generator</li>
+          <li>Sale and Member email via <a href="http://www.mailgun.com/">Mailgun</a></li>
+          <li>Monthly charges using tokenized payment</li>
+          <li>Full CMS including tagging and publishing</li>
         </ul>
       </div>
     </div>
   </div>
 
   <!-- Project -->
+  <div class="divider"></div>
+  <div class="project card row">
+    <div class="col-12">
+      <a href="">
+        <h3>Canvas Rails Boilerplate Generator</h3>
+      </a>
+      <p><span>Launched:</span> June 2014</p>
+      <p><span>Role:</span> Everything, baby</p>
+    </div>
+    <div class="col-6">
+      <div class="gutter">
+        <a href="">
+          <img src="/images/work/rails_boilerplate_md.png">
+        </a>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="gutter">
+        <h4>Description:</h4>
+        <p>Used by 3 major <a href="http://canvas.is/">Canvas</a> projects, the Rails Boilerplate Generator sets up a rails project just the way our team likes it.  Optional gem packs/installers allow for fine tuned customization.  Want to start off with a Devise-driven CMS with a mailer?  No problem.  Want a bare bones project with our page-specific JavaScript techniques included?  Easy.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project -->
+  <div class="divider"></div>
   <div class="project card row">
     <div class="col-12">
       <a href="http://www.nudeskincare.com/">
         <h3>Nude Skincare</h3>
       </a>
+      <p><span>Launched:</span> March 2014</p>
       <p><span>Role:</span> Lead Engineer</p>
     </div>
     <div class="col-6">
@@ -46,186 +89,147 @@ permalink: /work/
     </div>
     <div class="col-6">
       <div class="gutter">
+        <h4>Description:</h4>
+        <p>This is what its all about</p>
+      </div>
+      <div class="gutter">
         <h4>Implemented:</h4>
         <ul class="tag-list">
-          <li>Deployments via EngineYard</li>
-          <li>Continuous integration via CircleCI</li>
-          <li>Payment system</li>
-          <li>Shopping cart</li>
-          <li>Sale and Member email confirmations</li>
-          <li>Monthly charges using tokenized payment</li>
-          <li>Recurring events</li>
-          <li>Full CMS including tagging and publishing</li>
+          <li>Site / Product search via <a href="http://www.elasticsearch.org/">Elastic Search</a></li>
+          <li>Rspec + Cucumber test suite</li>
+          <li>CMS for blog posts, ingredients, etc.</li>
         </ul>
       </div>
     </div>
   </div>
-  <div class="divider"></div>
 
   <!-- Project -->
+  <div class="divider"></div>
   <div class="project card row">
     <div class="col-12">
-      <a href="http://www.thehighline.org/">
-        <h3>The High Line</h3>
+      <a href="https://www.flickr.com/photos/canvasnewyork/12667979255/in/set-72157641290671113/">
+        <h3>Aerial America Quiz Game</h3>
       </a>
+      <p><span>Launched:</span> February 2014</p>
+      <p><span>Role:</span> Lead Engineer</p>
     </div>
     <div class="col-6">
       <div class="gutter">
-        <a href="http://www.thehighline.org/">
-          <img src="/images/work/nude_home_md.png">
+        <a href="https://www.flickr.com/photos/canvasnewyork/12668458684/in/set-72157641290671113/">
+          <img src="/images/work/aerial_america_md.png">
         </a>
       </div>
     </div>
     <div class="col-6">
       <div class="gutter">
-        <p><span>Role:</span> Lead Engineer</p>
-        <p>Coordinated deployments using engineyard; continuous integration via CircleCI.
-        <p>Built payment and shopping cart system, sale and member purchase confirmation emails, and cron jobs for monthly membership charges using tokenized gateway requests.  I also built a sizeable CMS that covers blog management, creating recurring events, tagging, publishing, and merchandising products.</p>
+        <h4>Description:</h4>
+        <p>This project consists of a main Rails app that acts as a scoreboard, a small app which acts as a remote control, and a player app which 4 players use to select their answers.  The system involves 4 iPads, 1 iPad mini, and a Mac Mini connected to a large screen, synced together via websockets.  There were significant challenges getting all of the devices to provide a consistent user experience by gracefully dealing with network latency issues that cropped up.  The event took place in Times Square in the middle of winter.  You can see people playing it on the <a href="https://www.flickr.com/photos/canvasnewyork/12668458684/in/set-72157641290671113/">Canvas Flickr account</a></p>
+      </div>
+      <div class="gutter">
+        <h4>Implemented:</h4>
+        <ul class="tag-list">
+          <li>Phonegap</li>
+          <li>Websockets</li>
+          <li>Service Oriented Architecture</li>
+          <li>Game logic w/ <a href="https://github.com/pluginaweek/state_machine">State machine</a></li>
+        </ul>
       </div>
     </div>
   </div>
 
   <!-- Project -->
+  <div class="divider"></div>
+  <div class="project card row">
+    <div class="col-12">
+      <a href="https://github.com/jlarusso/tweetboard">
+        <h3>Tweetboard</h3>
+      </a>
+      <p><span>Launched:</span> December 2013</p>
+      <p><span>Role:</span> Back End Engineer</p>
+    </div>
+    <div class="col-6">
+      <div class="gutter">
+        <a href="https://github.com/jlarusso/tweetboard">
+          <img src="/images/work/tweetboard_md.png">
+        </a>
+      </div>
+    </div>
+    <div class="col-6">
+      <div class="gutter">
+        <h4>Description:</h4>
+        <p>This is what its all about</p>
+      </div>
+      <div class="gutter">
+        <h4>Implemented:</h4>
+        <ul class="tag-list">
+          <li>stuff</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Project -->
+  <div class="divider"></div>
   <div class="project card row">
     <div class="col-12">
       <a href="https://play.google.com/store/apps/details?id=info.mta.metro_north.train_time&hl=en">
-        <h3>Metro North TrainTime app</h3>
+        <h3>Metro North TrainTime App</h3>
       </a>
+      <p><span>Launched:</span> September 2013</p>
+      <p><span>Role:</span> Front End Engineer</p>
     </div>
     <div class="col-6">
       <div class="gutter">
         <a href="https://play.google.com/store/apps/details?id=info.mta.metro_north.train_time&hl=en">
-          <img src="/images/work/nude_home_md.png">
+          <img src="/images/work/metro_north_short.png">
         </a>
-      </div>
-      <div class="gutter">
-        <p><span>Role:</span> Front/Back end</p>
-        <p><span>Stack:</span> Ember, Grunt, Compass, PhoneGap</p>
       </div>
     </div>
     <div class="col-6">
       <div class="gutter">
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <ul>
-          <li>PhoneGap app for iOS &amp; Android</li>
-          <li>Modular SCSS</li>
+        <h4>Description:</h4>
+        <p>This is what its all about</p>
+      </div>
+      <div class="gutter">
+        <h4>Implemented:</h4>
+        <ul class="tag-list">
+          <li>stuff</li>
         </ul>
       </div>
     </div>
   </div>
 
   <!-- Project -->
+  <div class="divider"></div>
   <div class="project card row">
     <div class="col-12">
       <a href="">
-        <h3>Aerial America Quiz Game</h3>
+        <h3>Million Second Quiz</h3>
       </a>
+      <p><span>Launched:</span> September 2013</p>
+      <p><span>Role:</span> Data Viz</p>
     </div>
     <div class="col-6">
       <div class="gutter">
         <a href="">
-          <img src="/images/work/nude_home_md.png">
+          <img src="/images/work/msq/msq.jpeg">
         </a>
-      </div>
-      <div class="gutter">
-        <p><span>Role:</span> Project Lead</p>
-        <p><span>Stack:</span> Rails, JavaScript, PhoneGap-iOS, Websockets</p>
       </div>
     </div>
     <div class="col-6">
       <div class="gutter">
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <ul>
-          <li>Service oriented</li>
-          <li>Websockets</li>
-          <li>Live event</li>
+        <h4>Description:</h4>
+        <p>This is what its all about</p>
+      </div>
+      <div class="gutter">
+        <h4>Implemented:</h4>
+        <ul class="tag-list">
+          <li>stuff</li>
         </ul>
       </div>
     </div>
   </div>
 
-  <!-- Project -->
-  <div class="project card row">
-    <div class="col-12">
-      <a href="">
-        <h3>The Million Second Quiz</h3>
-      </a>
-    </div>
-    <div class="col-6">
-      <div class="gutter">
-        <a href="">
-          <img src="/images/work/nude_home_md.png">
-        </a>
-      </div>
-      <div class="gutter">
-        <p><span>Role:</span> Data viz</p>
-        <p><span>Stack:</span> Rails, D3.js</p>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="gutter">
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <ul>
-          <li>Masonry layout with data visualizations</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <!-- Project -->
-  <div class="project card row">
-    <div class="col-12">
-      <a href="">
-        <h3>Office Tweetboard</h3>
-      </a>
-    </div>
-    <div class="col-6">
-      <div class="gutter">
-        <a href="">
-          <img src="/images/work/nude_home_md.png">
-        </a>
-      </div>
-      <div class="gutter">
-        <p><span>Role:</span> blah</p>
-        <p><span>Stack:</span> blah</p>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="gutter">
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-      </div>
-    </div>
-  </div>
-
-  <!-- Project -->
-  <div class="project card row">
-    <div class="col-12">
-      <a href="">
-        <h3>Canvas Rails Boilerplate</h3>
-      </a>
-    </div>
-    <div class="col-6">
-      <div class="gutter">
-        <a href="">
-          <img src="/images/work/nude_home_md.png">
-        </a>
-      </div>
-      <div class="gutter">
-        <p><span>Role:</span> blah</p>
-        <p><span>Stack:</span> blah</p>
-      </div>
-    </div>
-    <div class="col-6">
-      <div class="gutter">
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-        <p>lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum </p>
-      </div>
-    </div>
-  </div>
 </section>
 
 
@@ -236,13 +240,5 @@ coffeescript**
 all the techs i know
 
 
-other-
-Productivity:
-rails template
-used by IYSL and Fresh and Highline
-defaults + configuration options
-optional gem bundles (cms, mailer)
-
-lita hipchat bot
 
 
