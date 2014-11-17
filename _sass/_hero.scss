@@ -1,6 +1,6 @@
 .monkey-hero {
   position: relative;
-  background: rgb(212, 230, 234);
+  // background: rgb(212, 230, 234);
   height: 200px;
 }
 
@@ -8,4 +8,29 @@
   position: absolute;
   right: 0px;
   width: 200px;
+}
+
+@include keyframes(presscaps) {
+  0% {
+    right: -30%;
+    bottom: 8px;
+    transform: rotate(10deg);
+  }
+
+  100% {
+    right: -12%;
+    bottom: 34px;
+    transform: rotate(-4deg);
+  }
+}
+
+.hand-svg {
+  position: absolute;
+  @include vendor-prefix(animation-name, presscaps);
+  @include vendor-prefix(animation-duration, 1s);
+  @include vendor-prefix(animation-iteration-count, 1);
+  @include vendor-prefix(animation-timing-function, ease-in);
+  @include vendor-prefix(animation-fill-mode, forwards);
+  right: -35%;
+  bottom: 10px;
 }
