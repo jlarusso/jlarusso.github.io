@@ -1,7 +1,11 @@
 .monkey-hero {
   position: relative;
-  // background: rgb(212, 230, 234);
   height: 200px;
+
+  svg {
+    position: absolute;
+    right: -250px;
+  }
 }
 
 .monk-img {
@@ -12,25 +16,27 @@
 
 @include keyframes(presscaps) {
   0% {
-    right: -30%;
-    bottom: 8px;
-    transform: rotate(10deg);
+    @include vendor-prefix(transform, rotate(0deg));
+  }
+
+  50% {
+    @include vendor-prefix(transform, rotate(0deg));
+  }
+
+  80% {
+    @include vendor-prefix(transform, rotate(10deg));
   }
 
   100% {
-    right: -12%;
-    bottom: 34px;
-    transform: rotate(-4deg);
+    @include vendor-prefix(transform, rotate(0deg));
   }
 }
 
-.hand-svg {
-  position: absolute;
+.svg-hand {
+  @include vendor-prefix(transform-origin, '100% 0%');
   @include vendor-prefix(animation-name, presscaps);
-  @include vendor-prefix(animation-duration, 1s);
+  @include vendor-prefix(animation-duration, 5s);
   @include vendor-prefix(animation-iteration-count, 1);
   @include vendor-prefix(animation-timing-function, ease-in);
   @include vendor-prefix(animation-fill-mode, forwards);
-  right: -35%;
-  bottom: 10px;
 }
