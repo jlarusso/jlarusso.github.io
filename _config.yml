@@ -1,10 +1,15 @@
 # Site settings
-title: JAL
+title: Jesse La Russo
 email: jesselarusso@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Write an awesome description for your new site here. You can edit this
-  line in _config.yml. It will appear in your document head meta (for
-  Google search results) and in your feed.xml site description.
+  Who is Jesse La Russo?  Doesn't have the same ring as Keyser Söze,
+  but that's an unfair comparison.  There's no movie about me. If
+  there was, it would start with a heated discussion about current
+  events.  The rising action would include my quest for the
+  elusive perfect data API.  The climax would be me raising my
+  hackathon trophy up above a roaring crowd.  I awaken realizing
+  it was all a dream.  The resolution- I grab my laptop and try
+  recording all that brilliant code I dreamt up.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jlarusso.github.io" # the base hostname & protocol for your site
 twitter_username: jesselarusso
