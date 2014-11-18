@@ -1,28 +1,16 @@
 // Hero
 // ----------------------------------------------------------------------------
 .monkey-hero {
+  background: url('/images/patterns/stripe.png');
   position: relative;
   height: 200px;
   border-bottom: 1px solid #e8e8e8;
 
+
   svg {
     position: absolute;
-    right: -250px;
+    right: 0px;
 
-    .keyboard-key {
-      stroke: black;
-      fill: white;
-    }
-
-    .text {
-      font-family: 'HelveticaNeue';
-      font-size: 10px;
-      fill: black;
-    }
-
-    .dot {
-      fill: black;
-    }
 
     .style3 {
       fill: #fdfdfd;
@@ -43,6 +31,40 @@
   width: 200px;
 }
 
+.svg-caps {
+  .keyboard-key {
+    stroke: black;
+    fill: white;
+  }
+
+  .text {
+    font-family: 'HelveticaNeue';
+    font-size: 10px;
+    fill: black;
+  }
+
+  .dot {
+    fill: black;
+  }
+
+  // &.inverted {
+  //   .keyboard-key {
+  //     stroke: white;
+  //     fill: black;
+  //   }
+
+  //   .text {
+  //     font-family: 'HelveticaNeue';
+  //     font-size: 10px;
+  //     fill: white;
+  //   }
+
+  //   .dot {
+  //     fill: white;
+  //   }
+  // }
+}
+
 
 // Animation
 // ----------------------------------------------------------------------------
@@ -51,11 +73,7 @@
     @include vendor-prefix(transform, rotate(0deg));
   }
 
-  50% {
-    @include vendor-prefix(transform, rotate(0deg));
-  }
-
-  80% {
+  75% {
     @include vendor-prefix(transform, rotate(10deg));
   }
 
@@ -64,10 +82,11 @@
   }
 }
 
-.svg-hand {
+#svg-hand {
   @include vendor-prefix(transform-origin, '100% 0%');
   @include vendor-prefix(animation-name, presscaps);
-  @include vendor-prefix(animation-duration, 5s);
+  @include vendor-prefix(animation-delay, 2s);
+  @include vendor-prefix(animation-duration, 1.5s);
   @include vendor-prefix(animation-iteration-count, 1);
   @include vendor-prefix(animation-timing-function, ease-in);
   @include vendor-prefix(animation-fill-mode, forwards);
