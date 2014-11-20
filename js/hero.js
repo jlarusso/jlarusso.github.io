@@ -1,7 +1,14 @@
-var pressCapsLock = function() {
-  // var capslock = document.getElementById("capslock");
-  // capslock.classList.remove('inverted')
+var heroText = document.getElementById("heroText");
+
+var randomWord = function() {
+  return 'a'
 }
 
-var anim = document.getElementById("svg-hand");
-anim.addEventListener("webkitAnimationEnd", pressCapsLock, false);
+i = 30
+var appendWord = function() {
+  heroText.innerHTML = heroText.innerHTML + randomLetter()
+
+  i--
+  if (i > 0) { setTimeout(appendLetter, 100) }
+}
+appendLetter()

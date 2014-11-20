@@ -9,7 +9,7 @@ description: > # this means to ignore newlines until "baseurl:"
   elusive perfect data API.  The climax would be me raising my
   hackathon trophy up above a roaring crowd.  I awaken realizing
   it was all a dream.  The resolution- I grab my laptop and try
-  recording all that brilliant code I dreamt up.
+  recording all that supposedly brilliant code I dreamt up.
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://jlarusso.github.io" # the base hostname & protocol for your site
 twitter_username: jesselarusso
