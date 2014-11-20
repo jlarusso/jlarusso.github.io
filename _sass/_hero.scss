@@ -1,5 +1,18 @@
 // Hero
 // ----------------------------------------------------------------------------
+.subtle-hero {
+  color: rgb(79, 226, 226);
+  position: relative;
+  // border-bottom: 1px solid #e8e8e8;
+  overflow: hidden;
+  font-size: 45px;
+  text-align: center;
+
+  span {
+    display: inline-block;
+  }
+}
+
 .monkey-hero {
   background: url('/images/patterns/stripe.png');
   position: relative;

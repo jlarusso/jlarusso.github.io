@@ -157,12 +157,18 @@
 }
 
 
+.wrapper {
+  background: white;
+  border-bottom: 1px solid #e8e8e8;
+  border-radius: 4px;
+}
 
 /**
  * Page content
  */
 .page-content {
-    padding: $spacing-unit 0;
+  padding: $spacing-unit 0;
+  background: #F7F7F7;
 }
 
 .page-heading {
