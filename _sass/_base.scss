@@ -136,6 +136,7 @@ pre {
 // Wrapper
 // ----------------------------------------------------------------------------
 .wrapper {
+  position: relative;
   max-width: -webkit-calc(960px - (#{$spacing-unit} * 2));
   max-width:         calc(960px - (#{$spacing-unit} * 2));
   margin-right: auto;

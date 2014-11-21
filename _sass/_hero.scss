@@ -1,21 +1,22 @@
 // Hero
 // ----------------------------------------------------------------------------
-.subtle-hero {
+.tagline {
   color: rgb(79, 226, 226);
-  position: relative;
-  // border-bottom: 1px solid #e8e8e8;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  bottom: 10px;
   overflow: hidden;
-  font-size: 45px;
-  text-align: center;
-
-  span {
-    display: inline-block;
-  }
+  font-size: 30px;
+  width: 48%;
+  text-align: left;
+  margin: 0;
 }
 
 .monkey-hero {
   background: url('/images/patterns/stripe.png');
   position: relative;
+  top: 30px;
   height: 200px;
   border-bottom: 1px solid #e8e8e8;
   overflow: hidden;
@@ -46,6 +47,10 @@
 }
 
 .svg-caps {
+  cursor: pointer;
+  @include vendor-prefix(user-select, none);
+
+
   .keyboard-key {
     stroke: black;
     fill: white;
@@ -61,22 +66,24 @@
     fill: black;
   }
 
-  // &.inverted {
-  //   .keyboard-key {
-  //     stroke: white;
-  //     fill: black;
-  //   }
+  &.inverted {
+    cursor: auto;
 
-  //   .text {
-  //     font-family: 'HelveticaNeue';
-  //     font-size: 10px;
-  //     fill: white;
-  //   }
+    .keyboard-key {
+      stroke: white;
+      fill: black;
+    }
 
-  //   .dot {
-  //     fill: white;
-  //   }
-  // }
+    .text {
+      font-family: 'HelveticaNeue';
+      font-size: 10px;
+      fill: white;
+    }
+
+    .dot {
+      fill: white;
+    }
+  }
 }
 
 #heroText {
@@ -105,8 +112,8 @@
   @include vendor-prefix(transform-origin, '100% 0%');
   @include vendor-prefix(animation-name, presscaps);
   // @include vendor-prefix(animation-delay, 1s);
-  @include vendor-prefix(animation-duration, .1s);
-  @include vendor-prefix(animation-iteration-count, 30);
+  @include vendor-prefix(animation-duration, .3s);
+  @include vendor-prefix(animation-iteration-count, 7);
   @include vendor-prefix(animation-timing-function, ease-in);
   @include vendor-prefix(animation-fill-mode, forwards);
 }
