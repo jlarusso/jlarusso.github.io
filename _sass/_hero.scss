@@ -3,14 +3,20 @@
 .tagline {
   color: rgb(79, 226, 226);
   position: absolute;
-  top: 10px;
+  top: 0;
   left: 20px;
-  bottom: 10px;
+  bottom: 0;
   overflow: hidden;
   font-size: 30px;
   width: 48%;
   text-align: left;
   margin: 0;
+
+  @include media-query($on-palm) {
+    left: 5px;
+    bottom: 85px;
+    width: 47%;
+  }
 }
 
 .monkey-hero {
@@ -22,16 +28,25 @@
   overflow: hidden;
 
 
+
   svg {
     position: absolute;
     right: 0px;
 
+    @include media-query($on-palm) {
+      right: -95px;
+    }
 
-    .style3 {
+
+    .polyline {
       fill: #fdfdfd;
       stroke: #000000;
       stroke-width: 1;
       stroke-miterlimit: 10;
+
+      @include media-query($on-palm) {
+        stroke-width: .5;
+      }
     }
 
     .thumbnail {
@@ -50,8 +65,13 @@
   cursor: pointer;
   @include vendor-prefix(user-select, none);
 
+  @include media-query($on-palm) {
+    .keyboard {
+      stroke-width: .5;
+    }
+  }
 
-  .keyboard-key {
+  .key {
     stroke: black;
     fill: white;
   }
@@ -69,7 +89,7 @@
   &.inverted {
     cursor: auto;
 
-    .keyboard-key {
+    .key {
       stroke: white;
       fill: black;
     }
@@ -84,12 +104,6 @@
       fill: white;
     }
   }
-}
-
-#heroText {
-  position: absolute;
-  padding: 5px;
-  color: rgb(68, 211, 216);
 }
 
 // Animation
